@@ -1,5 +1,9 @@
 # csv-reader 1.0.0 exact fast drop-in
 
+[![make.fun](https://make.fun/badge/csv-reader-speed-01-run-20261121.svg)](https://make.fun/bounty/csv-reader-speed-01-run-20261121)
+[![rank](https://make.fun/badge/csv-reader-speed-01-run-20261121/hyiiiii/csv-reader-speed-20261121/rank.svg)](https://make.fun/bounty/csv-reader-speed-01-run-20261121/leaderboard)
+[![reward](https://make.fun/badge/csv-reader-speed-01-run-20261121/hyiiiii/csv-reader-speed-20261121/reward.svg)](https://make.fun/bounty/csv-reader-speed-01-run-20261121)
+
 An original, dependency-free ESM CSV reader for the
 [make.fun](https://make.fun/) contest
 [Bounty](https://make.fun/bounty/csv-reader-speed-01-run-20261121)
@@ -106,6 +110,9 @@ ORACLE_PATH=/reference/program/generator/oracle.js ROUNDS=9 node tests/benchmark
 
 # Cold end-to-end benchmark (fresh process CPU, JSON parse/run/write)
 PIN_CPU=2 ROUNDS=7 node tests/cold-bench.mjs
+
+# Local README branding structure test (not GitHub rendering or About)
+node tests/branding.mjs
 ```
 
 The reference stays external through `ORACLE_PATH`, `PRACTICE_DIR`, `CASES`,
@@ -125,6 +132,7 @@ nothing outside this repository.
 - `tests/benchmark.mjs` — alternating fresh-process entry/oracle parser benchmark.
 - `tests/cold-bench.mjs` — fresh-process end-to-end CPU benchmark with hashes,
   optionally pinned to one CPU via `PIN_CPU`.
+- `tests/branding.mjs` — local Markdown branding structure and self-tests.
 - `LICENSE` — MIT.
 
 ## Caveats
@@ -141,34 +149,39 @@ nothing outside this repository.
 - The official local make.fun check does **not** cover server-side README/About
   branding. Branding is not claimed as passed.
 
-## PENDING publication checklist (not done yet)
+## Publication status and remaining gates
 
-No public repository or remote exists yet. Do not create a public repo, add a
-remote, push, sign, log in, pay or submit as part of this phase. Public
-publication and branding remain pending.
+This repository is a **candidate prepared for submission**, not an entry, not
+winning, and not paid. The planned identity is
+`hyiiiii/csv-reader-speed-20261121`; no public repository or remote exists yet,
+and this build has not created or reserved one.
+
+Local preparation done:
 
 - [x] `LICENSE` carries the literal `SPDX-License-Identifier: MIT`; the local
       check's `license_osi` passes.
 - [x] `.makefun/owner.json` contains only the already-confirmed public linked
       make.fun wallet marker; it is not a private key and required no signature.
-- [ ] Decide the exact GitHub `OWNER/REPO` identity (pending; public repo not
-      created).
-- [ ] Replace the badge placeholders below with the three live linked Markdown
-      **image** badges, using the real owner/repo. The eventual README must show:
+- [x] README carries the three linked make.fun badge images for the planned
+      identity. `tests/branding.mjs` validates Markdown structure only, not
+      GitHub rendering.
+- [x] The local worktree check passed; transcript/thinking checks are skipped
+      under this bounty's `transcripts_required: false`.
 
-      [![competition](https://make.fun/badge/csv-reader-speed-01-run-20261121.svg)](https://make.fun/bounty/csv-reader-speed-01-run-20261121)
-      [![rank](https://make.fun/badge/csv-reader-speed-01-run-20261121/OWNER/REPO/rank.svg)](https://make.fun/bounty/csv-reader-speed-01-run-20261121)
-      [![reward](https://make.fun/badge/csv-reader-speed-01-run-20261121/OWNER/REPO/reward.svg)](https://make.fun/bounty/csv-reader-speed-01-run-20261121)
+Not done yet, and server-only or publication-time:
 
-- [ ] GitHub About homepage exactly:
-      `https://make.fun/bounty/csv-reader-speed-01-run-20261121`
-- [ ] GitHub About topic exactly: `makefun`
-- [ ] Make the repository public, declare actual ownership later, and audit the
-      full real native logs/private context.
-- [ ] Run the official make.fun check on the commit to submit; the local worktree
-      check passed, and the five `SUBMISSION` server gates remain.
+- [ ] Create the public repository at the planned identity.
+- [ ] Add a remote, push, and make the repository public.
+- [ ] Set GitHub About homepage exactly
+      `https://make.fun/bounty/csv-reader-speed-01-run-20261121` and topic
+      `makefun`. This has not been verified or updated by this build.
+- [ ] Confirm the rendered GitHub README badges and About after publication; the
+      local branding test says nothing about actual rendering.
+- [ ] Audit the full real native logs/private context and run the official
+      make.fun check on the commit to submit; the five `SUBMISSION` server gates
+      remain.
 - [ ] Obtain the user's own signature.
-- [ ] Then submit; never claim winning, submission or branding before these.
+- [ ] Submit. Never claim submitted, winning, branded or paid before these.
 
 ## License
 
