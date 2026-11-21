@@ -1,0 +1,9 @@
+{
+  "name": "csv-reader-speed-entry",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Dependency-free exact drop-in for csv-reader 1.0.0",
+  "license": "MIT",
+  "main": "main.ts"
+}
